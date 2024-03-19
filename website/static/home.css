@@ -9,6 +9,14 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     background-color:slategray;
+    text-decoration:dashed;
+}
+
+nav :hover{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: chocolate;
 }
 
 h1 {

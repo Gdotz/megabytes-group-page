@@ -10,6 +10,11 @@ def home():
     print(overview)
     return render_template("home.html")
 
-def home():
+@feature.route("/mon")
+def mon():
+    overview = Overview.query.all()
+    print(overview)
     return render_template("mon.html")
+
+
     
