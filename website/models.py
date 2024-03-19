@@ -1,7 +1,7 @@
 from . import db
 import datetime
 
-class overview(db.Model):
+class Overview(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     task = db.Column(db.String(300), unique = True)
     #                         no longer than 300 words (limitation), the unique keeps the data clean 

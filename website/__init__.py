@@ -11,7 +11,7 @@ def create_app():
     from .features import feature
     app.register_blueprint(feature)
 
-    from .models import overview
+    from .models import Overview
     with app.app_context():
         db.create_all()
 
