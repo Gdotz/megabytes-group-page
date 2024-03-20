@@ -3,7 +3,8 @@ import datetime
 
 class Overview(db.Model):
     id = db.Column(db.Integer, primary_key = True)
-    task = db.Column(db.String(300), unique = True)
-    #                         no longer than 300 words (limitation), the unique keeps the data clean 
-    complete = db.Column(db.Boolean, default = False)
-    #These arre the columns.
+    db_total_income = db.Column(db.Float)
+    db_highest_spend = db.Column(db.Float)
+    db_bestseller = db.Column(db.String(300))
+    db_worstseller = db.Column(db.String(300))
+    db_mvp = db.Column(db.String(300))

@@ -1,42 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='home.css') }}">
-    
-</head>
-<h1>Weekly overview</h1>
+{% extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='home.css') }}"> 
+{% endblock %}
+<header id="input-data">
+</header>
+
 <body>
-    <nav>
-        <a href="home.html">Week overview</a>
-        <a href="mon.html">Monday</a>
-        <a href="tues.html">Tuesday</a>
-        <a href="wed.html">Wednesday</a>
-        <a href="thurs.html">Thursday</a>
-        <a href="fri.html">Friday</a>
-        <a href="sat.html">Saturday</a>
-        <a href="sun.html">Sunday</a>
-    </nav>
-    
-    <header id="input-data">
-    </header>
 
-    <section id="total-income">
-    </section>
-    <section id="highest-spend">
-    </section>
-    <section id="best-selling-item">
-    </section>
-    <section id="least-sold-item">
-    </section>
-    <section id="MVP-staff">
-    </section>
+<h1>Weekly overview</h1>
+{% block content %} 
 
-    <form id="graph">
+    <form method="post" action = "/add">
+        <input type="text" name="total_income">
+        <button type="submit">Enter data</button>
+
     </form>
+<hr>
+{% for income in overview_list %}
+    {{ income.db_total_income }}
+{% endfor %}
+<div class="dropdown">
+    <form method="post" action = "/add">
+    <div class="box1">
+        
+        <section id="total-income">
+            <input type="text" placeholder="Total income" name="total_income">
+        </section>
 
-    
+        <section id="highest-spend">
+            <input type="text" placeholder="Highest spend" name="highest_spend">
+        </section>
+    </div>
+    <div class="box2">
+        <section id="best-selling-item">
+            <input type="text" placeholder="Best selling item" name="best_selling_item">
+        </section>
 
+        <section id="least-sold-item">
+            <input type="text" placeholder="Least sold item" name="least_selling_item">
+        </section>
+    </div>
+
+    <div class="box3">
+        <section id="MVP-staff">
+            <input type="text" placeholder="MVP staff" name="MVP_staff">
+        </section>
+        
+    </div>
+    <div class="enter">
+        <input type="submit">
+        </div>
+</div>
+
+</form>
+
+<div class="id">
+    for input 
+</div>
+<div class="id1">
+    more input
+</div>
+
+<div class="graph">
+    graph
+</div>
+
+
+
+{% endblock %}
 </body>
 </html>

@@ -1,5 +1,9 @@
+.monday {
+    background-color: aqua;
+}
+
 body {
-    background-color:aqua;
+    background-color: aqua;
 }
 
 nav {
@@ -11,4 +15,31 @@ nav {
 
 nav a {
     border: 0.5%;
+}
+
+h1 {
+    justify-content: center;
+    align-items: center;
+}
+
+.whole {
+    background-color: gainsboro;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 1%;
+    margin: 1%;
+    width: auto;
+    padding: 5%;
+    border: 5px rgb(89, 87, 87) solid;
+}
+
+.graph {
+    background-color: gainsboro;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 1%;
+    margin: 1%;
+    width: auto;
+    padding: 5%;
+    border: 5px rgb(89, 87, 87) solid;
 }
