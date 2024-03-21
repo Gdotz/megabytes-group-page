@@ -10,17 +10,12 @@
 <h1>Weekly overview</h1>
 {% block content %} 
 
-    <form method="post" action = "/add">
-        <input type="text" name="total_income">
-        <button type="submit">Enter data</button>
-
-    </form>
 <hr>
 {% for income in overview_list %}
     {{ income.db_total_income }}
 {% endfor %}
 <div class="dropdown">
-    <button class="dropbtn">Dropdown</button>
+    <button class="dropbtn">Input your data</button>
     <div class="dropdown-content">
     <form method="post" action = "/add">
     <div class="box1">
@@ -57,14 +52,28 @@
 </form>
 
 <div class="id">
-    for input 
+    <div class="idc1">
+        <p>Total:</p>
+    </div>
+    <div class="idc2">
+        <p>Highest spend:</p>
+        
+    </div>
 </div>
 <div class="id1">
-    more input
+    <div class="id1c1">
+        <p>Best selling:</p>
+    </div>
+    <div class="id1c2">
+        <p>Least sold:</p>
+    </div>
+</div>
+<div class="id2">
+    <p>MVP Staff Member</p>
 </div>
 
 <div class="graph">
-    graph
+    <img src="{{ url_for('static', filename='images/bar_monday 1.png') }}">
 </div>
 
 
