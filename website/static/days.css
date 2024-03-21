@@ -21,7 +21,7 @@ nav {
 nav a {
     color:black;
     font-family: monospace;
-    font-size: xx-large;
+    font-size: 30px;
 }
 
 nav :hover{
@@ -64,22 +64,20 @@ h1 {
 }
 
 .lsec {
-    background-color: gainsboro;
-    display: flex;
-    margin-bottom: 1%;
-    margin: 5%;
     width: 100%;
-    height: 100px;
-    padding: 5%;
-    
 }
 
-.mvp, .best-selling-item, .least-sold-item, .profit{
+.mvp, .best, .least, .profit{
     background-color: gainsboro;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    margin: 1%;
+    width: 87.5%;
     padding: 5%;
     border: 5px rgb(89, 87, 87) solid;
+}
+
+p {
+    font-size: 40px;
 }

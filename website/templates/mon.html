@@ -10,27 +10,33 @@
     <div class="whole">
         <div class="lsec">
             <div class="mvp">
-                <p>MVP</p>
+                <p>MVP
+                    {{mvp}}
+                </p>
             </div>
-            <div class="best-selling-item">
-              <p>Best selling item</p> 
+            <div class="best">
+              <p>Best selling item 
+                {{best_seller}}
+              </p> 
             </div> 
-            <div class="least-sold-item">
-               <p>Least sold item</p> 
+            <div class="least">
+               <p>Least sold item
+                {{worst_seller}}
+               </p> 
               </div> 
               <div class="profit">
-                <p>Overall profit</p>
+                <p>Overall profit
+                    {{income}}
+                </p>
                </div> 
 
     </div>
     </div>
    <div class="graph">
     <img src="{{ url_for('static', filename='images/bar_monday 1.png') }}">
+    <img src="" alt="">
         </div>
-        
-    <div class="graph1">
-        <img src="" alt="graph"> 
-       </div>
+            
     
 </div>
    

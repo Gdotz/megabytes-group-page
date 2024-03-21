@@ -8,3 +8,4 @@ class Overview(db.Model):
     db_bestseller = db.Column(db.String(300))
     db_worstseller = db.Column(db.String(300))
     db_mvp = db.Column(db.String(300))
+

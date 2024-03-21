@@ -10,6 +10,12 @@
 <h1>Weekly overview</h1>
 {% block content %} 
 
+<form method="post" action = "/add">
+    <input type="text" name="total_income">
+    <button type="submit">Enter data</button>
+
+</form>
+
 <hr>
 {% for income in overview_list %}
     {{ income.db_total_income }}
@@ -50,27 +56,37 @@
 </div>
 
 </form>
-
-<div class="id">
-    <div class="idc1">
-        <p>Total:</p>
-    </div>
-    <div class="idc2">
-        <p>Highest spend:</p>
-        
-    </div>
+<div class="whole">
+<div class="results">
+    <div class="total">
+<p>  Total Income
+{{max_total_income}} </p>
 </div>
-<div class="id1">
-    <div class="id1c1">
-        <p>Best selling:</p>
+<div class="high">
+<p>Highest Spend  
+{{max_highest_spend}} </p>
+</div> 
+ </div>
+<div class="results2">
+<section class = "best">
+    <p>Best seller
+        {{mode_bestseller}}
+    </p>
+    </section>
+    
+        <section class = "least">
+        <p>Worst seller
+        {{mode_worst_seller}}
+    </p>
+    </section>
     </div>
-    <div class="id1c2">
-        <p>Least sold:</p>
+    <section class = "mvp">
+        <p>MVP Staff
+        {{mode_mvp_staff}}
+    </p>
+    </section>
+   
     </div>
-</div>
-<div class="id2">
-    <p>MVP Staff Member</p>
-</div>
 
 <div class="graph">
     <img src="{{ url_for('static', filename='images/bar_monday 1.png') }}">
