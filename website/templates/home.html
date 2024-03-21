@@ -20,9 +20,10 @@
     {{ income.db_total_income }}
 {% endfor %}
 <div class="dropdown">
+    <button class="dropbtn">Dropdown</button>
+    <div class="dropdown-content">
     <form method="post" action = "/add">
     <div class="box1">
-        
         <section id="total-income">
             <input type="text" placeholder="Total income" name="total_income">
         </section>
@@ -50,6 +51,7 @@
     <div class="enter">
         <input type="submit">
         </div>
+    </div>
 </div>
 
 </form>

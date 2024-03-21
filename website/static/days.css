@@ -1,9 +1,13 @@
-.monday {
-    background-color: aqua;
+body {
+    background-color:lightskyblue;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
-body {
-    background-color: aqua;
+form {
+    width: 100%;
 }
 
 nav {
@@ -11,15 +15,30 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     background-color:slategray;
+    text-decoration:dashed;
 }
 
 nav a {
-    border: 0.5%;
+    color:black;
+    font-family: monospace;
+    font-size: xx-large;
+}
+
+nav :hover{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color:white;
 }
 
 h1 {
+    display: flex;
     justify-content: center;
     align-items: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-decoration-style:dashed;
 }
 
 .whole {
@@ -36,10 +55,21 @@ h1 {
 .graph {
     background-color: gainsboro;
     display: flex;
-    justify-content: right;
+    justify-content: space-evenly;
     margin-bottom: 1%;
     margin: 1%;
-    width: auto;
+    width: 90%;
+    padding: 5%;
+    border: 5px rgb(89, 87, 87) solid;
+}
+
+.lsec {
+    background-color: gainsboro;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1%;
+    margin: 1%;
+    width: 90%;
     padding: 5%;
     border: 5px rgb(89, 87, 87) solid;
 }
